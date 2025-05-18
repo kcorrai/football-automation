@@ -1,10 +1,10 @@
 {
-    "api_url": "https://api.football-data.org/v2/matches",
+    "api_url": "https://api.football-data.org/v4/matches",
     "api_key": "c198b32b235b4d3ea43ffe50e29ffd45",
     "smtp_server": "smtp.gmail.com",
     "smtp_port": 587,
     "email_username": "kraloyun0132@gmail.com",
-    "email_password": "hqmw xxje oywo oasj",
+    "email_password": "ujch xxok ytcb hkow",
     "recipient_email": "kraloyun0132@gmail.com",
     "email_subject": "Kcorrai Football Match Alert",
     "schedule_time": "06:00"
