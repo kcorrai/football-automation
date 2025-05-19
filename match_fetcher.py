@@ -14,12 +14,12 @@ def fetch_matches(api_url, api_key):
     response = requests.get(api_url, headers=headers)
     if response.status_code == 200:
         data = response.json()
-        # Ham veriyi terminalde yazdır (sadece 'FINISHED' olanlar)
+        # Sadece 'FINISHED' olan maçları filtrele ve terminalde yazdır
         finished_matches = [
             match for match in data["matches"] if match["status"] == "FINISHED"
         ]
         print("Ham veri (FINISHED maçlar):", json.dumps(finished_matches, indent=4))
-        today = datetime.utcnow().date()  # Günün UTC tarihini al
+        today = datetime.utcnow().date() - timedelta(days=10) # Günün UTC tarihini al
         yesterday = today - timedelta(days=1)  # Dünün tarihini al
         # Maç bilgilerini işleyip sadece dün ve bugün arasındaki 'FINISHED' maçları döndür
         matches = [
